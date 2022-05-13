@@ -1,0 +1,77 @@
+@import "../../global.scss";
+
+.portfolio{
+    background-color: lightskyblue;
+    //font-weight: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .list{
+        flex: 0.3;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    h1{
+        flex: 0.5;
+        font-size: 50px;
+    }
+
+    
+
+    .container{
+        flex: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include mobile{
+            flex-direction: column;
+        }
+
+        .items{
+            display: flex;
+            border-radius: 15px;
+            border: 1px solid lightgray;
+            margin: 10px;
+            width: 300px;
+            height: 150px;
+            background-color: $maincolor;
+            cursor: pointer;
+            justify-content: center;
+
+            @include mobile{
+                width: 200px;
+                height: 90px;
+            }
+
+            img{
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+
+            h3{
+                width: 100px;
+            }
+        }
+    }
+    a{
+        flex: 0.3;
+        bottom: 0px;
+        img{
+            width: 30px;
+             height: 20px;
+             animation: arrowBlin 1s infinite ;
+        }
+
+        @keyframes arrowBlin {
+            100%{
+                opacity: 0;
+            }
+        }
+    }
+}

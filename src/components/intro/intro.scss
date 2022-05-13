@@ -1,0 +1,130 @@
+@import "../../global.scss";
+
+
+.intro{
+    width: 100%;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        flex: 0.5;
+
+        .imgContainer{
+            width: 400px;
+            height: 400px;
+            background-color: lightsalmon;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            float: right;
+            margin-right: 10%;
+            margin-top: 10%;
+
+            @include mobile{
+                width: 200px;
+                height: 200px;
+                float: unset;
+            }
+
+            .image{
+                //background-image: url('./assets/laco.jpg');
+                height: 110%;
+                width: 120%;
+                border-color: aqua;
+                border-width: 20px;
+                img{
+                    align-items: center;
+                    width: 100%;
+                    height: 90%;
+                    margin-top: 25px;
+                    margin-right: 20px;
+                    
+                    @include mobile{
+                        height: 90%;
+                        width: 100%;
+                    }
+                }
+                
+            }
+        }
+    }
+    .right{
+        flex: 0.5;
+        display: flex;
+        flex-direction: column;
+        //align-content: space-between;
+        justify-content: center;
+        position: relative;
+        
+
+        .wrapper{
+            padding-left: 30px;
+            //display: flex;
+            flex-direction: column;
+            justify-content: center;
+           // background-color: #fff;
+            //align-items: center;
+           
+            h2{
+                font-size: 30px;
+                font-weight: 700;
+                @include mobile{
+                    font-size: 20px;
+                }
+            }
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+                @include mobile{
+                    @include mobile{
+                        font-size: 30px;
+                    }
+                }
+            }
+            h3{
+                font-size: 30px;
+                position: absolute;
+                margin-left: 100px;
+                @include mobile{
+                    font-size: 20px;
+                    margin-left: 0px;
+                }
+                
+                span{
+                   font-size: inherit;
+                   color: aqua; 
+                }
+                .ityped-cursor{
+                    animation: blink 1s infinite;
+                }
+                @keyframes blink {
+                    100%{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        a{
+            position: absolute;
+            bottom: 10px;
+            left: 10%;
+            img{
+                width: 10%;
+                 height: 10%;
+                 animation: arrowBlink 1s infinite ;
+            }
+
+            @keyframes arrowBlink {
+                100%{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+}
